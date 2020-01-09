@@ -67,7 +67,7 @@ body.body-state6 .state6{
 	width: 20px;
 	height: 100px;
 	background-color: orange;
-	transition: bottom 4000ms;
+	transition: bottom 6000ms;
 }
 
 .rocket.flying {

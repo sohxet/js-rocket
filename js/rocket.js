@@ -22,7 +22,7 @@ var changeState = function (newState) {
 		var success = setTimeout( function () {
 			var randmonNum = Math.round( Math.random() * 10 );
 			console.log( randmonNum );
-			if ( randmonNum > 5 ){
+			if ( randmonNum > 1 ){
 				changeState( 4 );
 			} else {
 				changeState( 5 );
