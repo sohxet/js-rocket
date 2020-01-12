@@ -1,3 +1,7 @@
+setTimeout( function () {
+	location.href='rocket.html'
+}, 1000 );
+
 	// changes class name
 var doStuff = function () {
 	var currentClassName = document.getElementById('cool').className;
