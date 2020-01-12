@@ -1,10 +1,15 @@
 var timer = null;
 var countdown = 10;
-var changeState = function (newState) {
+var changeState = function ( newState ) {
 	document.body.className = 'body-state' + newState;
 	clearInterval( timer );
 	var countdown = 10;
 	document.getElementById( 'countdown' ).innerHTML = countdown;
+	// reset state 1
+	if ( newState == 1 ) {
+		document.getElementById('nervous').className='nervous';
+		document.getElementById('cant-wait').className='cant-wait';
+	}
 
 	// countdown
 	if ( newState == 2 ){
@@ -13,6 +18,16 @@ var changeState = function (newState) {
 			document.getElementById( 'countdown' ).innerHTML = countdown;
 			if( countdown == 0 ) {
 				changeState( 3 );
+			}
+			if ( countdown > 4 && countdown < 8 ) {
+				document.getElementById('nervous').className='nervous show';
+			} else {
+				document.getElementById('nervous').className='nervous';
+			}
+			if ( countdown > 1 && countdown <= 4 ) {
+				document.getElementById('cant-wait').className='cant-wait show';
+			} else {
+				document.getElementById('cant-wait').className='cant-wait';
 			}
 		}, 300 );	
 	}
@@ -32,11 +47,6 @@ var changeState = function (newState) {
 
 	// crash
 	else if ( newState == 5 ) {
-
-	}
-
-	// countdown aborted
-	else if ( newState == 6 ){
 
 	}
 }
